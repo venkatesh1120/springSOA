@@ -1,0 +1,3 @@
+<apex:page controller="CallOutTestCTRL" sidebar="false" showHeader="false" standardStylesheets="false" lightningStylesheets="true">
+    <apex:outputText value="{!responseText}"></apex:outputText>
+</apex:page>
