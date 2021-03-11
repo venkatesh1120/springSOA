@@ -1,0 +1,9 @@
+.THIS .slds-page-header{
+    text-align:center;
+    background: rgb(84,105,141);
+    color: black;
+}
+
+.THIS .slds-modal__footer{
+    background: rgb(84,105,141);
+}

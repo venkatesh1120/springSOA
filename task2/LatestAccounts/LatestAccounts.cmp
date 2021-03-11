@@ -1,0 +1,26 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:LightningQuickActionWithoutHeader" access="global" controller="listOfAccts" >
+	<aura:handler name="init" value="{!this}" action="c.doinit"/>
+    <aura:attribute name="AccounColumns" type="list" description="Stores column names for the DataTable"/>
+    <aura:attribute name="Accountdata" type="list" description="Stores records displayed in the  table"/>
+    <aura:attribute name="Spin" type="Boolean"/>
+    <aura:if isTrue="{!v.Spin}">
+       <lightning:spinner variant="brand" class="spinner-show"  size="large" />
+    </aura:if>
+    <div class="slds-m-around_xx-large">
+    
+        <div class="slds-page-header" role="banner">
+            <span class="slds-page-header__title"><b>List Of Ten Recent Accounts</b></span>
+        </div>
+     <div >
+        <lightning:datatable 
+                             aura:id="subjectdatatable"
+                             keyField="Id"
+                             columns="{!v.AccounColumns}"
+                             data="{!v.Accountdata}" hideCheckboxColumn="true"/>
+        </div>
+   <footer class="slds-modal__footer" style="background: rgb(84,105,141);">
+       
+    </footer>
+        
+    </div> 
+</aura:component>
