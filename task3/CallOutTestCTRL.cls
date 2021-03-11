@@ -14,7 +14,8 @@ public class CallOutTestCTRL {
             System.debug('Exception found in class  method  ' + e.getMessage());
             System.debug('Exception found in class  method  ' + e.getLineNumber());
         }
-        system.debug('xxxxx'+httpRes.getBody());
+        system.debug('response'+httpRes);
+        system.debug('response body'+httpRes.getBody());
         responseText =httpRes.getBody();
     }
 }
